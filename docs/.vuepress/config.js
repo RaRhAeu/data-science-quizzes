@@ -4,11 +4,13 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Welcome to DS Quizzes',
+  title: 'DS Quizzes',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
   description: description,
+
+  // base: "https://rarhaeu.github.io/RaRhAeu.dsq.github.io/",
 
   /**
    * Extra tags to be injected to the page HTML `<head>`
@@ -32,8 +34,9 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
-
+    logo: 'logo.svg',
     nav: [
+
       {
         text: 'Books',
         link: '/books/'
@@ -53,14 +56,14 @@ module.exports = {
         {
           title: 'Example Book',
           collapsable: false,
-          children: [
-            '',
-            '/example_quiz/',
-          ]
+
+        },
+        {
+          title: 'Advanced R'
         }
       ],
     }
-    **/
+**/
   },
 
   /**

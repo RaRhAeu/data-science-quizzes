@@ -1,6 +1,6 @@
 # data-science-quizzes
 
-> Website with awesome quizzes more or less related to data science
+Website with awesome quizzes more or less related to data science
 
 ## Development
 
@@ -9,5 +9,10 @@ yarn dev
 yarn build
 ```
 
-For more details, please head VuePress's [documentation](https://v1.vuepress.vuejs.org/).
+or
+```bash
+npm install
+npm run dev
+```
 
+For more details, please head VuePress's [documentation](https://v1.vuepress.vuejs.org/).

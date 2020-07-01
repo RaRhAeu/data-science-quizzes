@@ -3,3 +3,5 @@
 
 ### Quizes
 [Example Quiz](/books/example_book/example_quiz/)
+
+## Code examples

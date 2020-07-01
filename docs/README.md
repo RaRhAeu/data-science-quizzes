@@ -1,15 +1,15 @@
 ---
 home: true
-heroImage: https://v1.vuepress.vuejs.org/hero.png
+heroImage: ./logo.svg
 tagline: Website with awesome quizzes more or less related to data science
-actionText: Quick Start →
-actionLink: /guide/
+actionText: Get Started →
+actionLink: /books/
 features:
-- title: Feature 1 Title
-  details: Feature 1 Description
-- title: Feature 2 Title
-  details: Feature 2 Description
-- title: Feature 3 Title
-  details: Feature 3 Description
-footer: Made by Radzim Kowalow with ❤️
+- title: Easy to extend
+  details: It's easy to add new books/articles/quizzes. Just write a markdown file, and submit a pull request!
+- title: Open for contributions
+  details: Everyone who wants to extend our collection is welcome!
+- title: Totally free
+  details: This project is totally open source, feel free to fork it and change whatever you want.
+footer: Made by rarha_eu and jakwisn with ❤️
 ---

@@ -32,6 +32,7 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
+
     nav: [
       {
         text: 'Books',
@@ -46,18 +47,20 @@ module.exports = {
         link: '/faq/'
       }
     ],
+    /**
     sidebar: {
       '/books/': [
         {
-          title: 'Example',
+          title: 'Example Book',
           collapsable: false,
           children: [
             '',
-            'using-vue',
+            '/example_quiz/',
           ]
         }
       ],
     }
+    **/
   },
 
   /**

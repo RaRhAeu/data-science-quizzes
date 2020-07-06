@@ -10,7 +10,7 @@ module.exports = {
    */
   description: description,
 
-  // base: "https://rarhaeu.github.io/RaRhAeu.dsq.github.io/",
+  base: process.env.BASE_URL || "/",
 
   /**
    * Extra tags to be injected to the page HTML `<head>`
@@ -34,7 +34,7 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
-    logo: 'logo.svg',
+    logo: '/logo.svg',
     nav: [
 
       {

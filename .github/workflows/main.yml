@@ -1,24 +1,21 @@
-name: Build and Deploy
-
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
+name: deploy CI
+on: [push]
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@master
+    - uses: actions/checkout@master
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
 
-    - name: Build and Deploy
-      uses: grasilife/github-pages-deploy-action@master
+    - run: npm install
+    - run: ./deploy.sh
       env:
-        ACCESS_TOKEN: ${{ secrets.BUILD_GH }}
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BASE_BRANCH: master # The branch the action should deploy from.
         BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: build # The folder the action should deploy.
-        BASE_URL: "data-science-quizzes/"
         BUILD_SCRIPT: npm install && npm run-script build # The build script the action should run prior to deploying.
+        CI: true

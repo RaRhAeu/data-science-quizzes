@@ -17,19 +17,8 @@ jobs:
     - run: cd ./docs/.vuepress/dist
     - run: git init
     - run: git add -A
+    - run: git commit -m "deploy"
+    - run: git push -f https://$(TOKEN)@github.com:RaRhAeu/data-science-quizzes.git master:gh-pages
       env:
         BASE_URL: "/data-science-quizzes/"
-    - uses: actions/checkout@master
-      with:
-        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-        fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
-      run: |
-        git commit -m "deploy"
-        git config --global user.email "radzim_ko@wp.pl"
-        git config --global user.name "Radzim Kowalow"
-    - name: Push
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.deploy_gh }}
-        branch: gh-pages
-        force: true
+        TOKEN: ${{ secrets.deploy_gh }}

@@ -38,6 +38,7 @@ git config --global user.name "${COMMIT_NAME}" && \
 
 export BASE_URL="/data-science-quizzes/"
 
+npm install -D
 npm run build
 
 cd docs/.vuepress/dist

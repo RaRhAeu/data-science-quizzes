@@ -56,3 +56,15 @@ $ other
 `I'm not a programmer`
 
 </Answer>
+
+## Did you enjoy the quiz?
+<Answer correct=true>
+
+Yes
+
+</Answer>
+<Answer>
+
+No
+
+</Answer>

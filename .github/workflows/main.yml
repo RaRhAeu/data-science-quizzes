@@ -1,24 +1,21 @@
 name: deploy CI
-
 on: [push]
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@master
     - name: Use Node.js
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
+
     - run: npm install
-    - run: npm run build
-    - run: cd ./docs/.vuepress/dist
-    - run: git init
-    - run: git add -A
-    - run: git commit -m "deploy"
-    - run: git push -f https://$(TOKEN)@github.com:RaRhAeu/data-science-quizzes.git master:gh-pages
+    - run: ./deploy.sh
       env:
-        BASE_URL: "/data-science-quizzes/"
-        TOKEN: ${{ secrets.deploy_gh }}
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BASE_BRANCH: master # The branch the action should deploy from.
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: build # The folder the action should deploy.
+        BUILD_SCRIPT: npm install && npm run-script build # The build script the action should run prior to deploying.
+        CI: true

@@ -16,10 +16,6 @@ jobs:
     - run: npm run build
       env:
         BASE_URL: "/data-science-quizzes/"
-    - uses: actions/checkout@master
-      with:
-        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-        fetch-depth: 0
     - name: Configure git
       run: |
         cd docs/.vuepress/dist

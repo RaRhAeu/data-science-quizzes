@@ -4,7 +4,6 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -14,6 +13,20 @@ jobs:
       with:
         node-version: '12.x'
     - run: npm install
-    - run: ./deploy.sh
+    - run: npm run build
       env:
-        CI: true
+        BASE_URL: "/data-science-quizzes/"
+    - name: Configure git
+      run: |
+        cd docs/.vuepress/dist
+        git init
+        git add -A
+        git commit -m "deploy"
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+    - name: Push
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.deploy_gh }}
+        branch: gh-pages
+        force: true

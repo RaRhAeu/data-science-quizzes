@@ -4,6 +4,7 @@ set -e
 
 export BASE_URL="/data-science-quizzes/"
 
+npm install
 npm run build
 
 cd docs/.vuepress/dist

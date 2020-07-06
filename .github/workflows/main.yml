@@ -16,14 +16,18 @@ jobs:
     - run: npm run build
       env:
         BASE_URL: "/data-science-quizzes/"
+    - uses: actions/checkout@master
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+        fetch-depth: 0
     - name: Configure git
       run: |
         cd docs/.vuepress/dist
         git init
         git add -A
         git commit -m "deploy"
-        git config --local user.email "radzim_ko@wp.pl"
-        git config --local user.name "Radzim Kowalow"
+        git config --global user.email "radzim_ko@wp.pl"
+        git config --global user.name "Radzim Kowalow"
     - name: Push
       uses: ad-m/github-push-action@master
       with:

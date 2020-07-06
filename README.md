@@ -1,6 +1,8 @@
 # data-science-quizzes
 
-Website with awesome quizzes more or less related to data science
+#### [Website with awesome quizzes](https://rarhaeu.github.io/data-science-quizzes/)  more or less related to data science
+
+
 
 ## Development
 

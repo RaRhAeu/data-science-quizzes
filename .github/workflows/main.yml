@@ -1,24 +1,19 @@
-name: Build and Deploy
+name: deploy CI
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
+on: [push]
+branches:
+  - master
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@master
+  build:
 
-    - name: Build and Deploy
-      uses: grasilife/github-pages-deploy-action@master
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - run: ./deploy.sh
       env:
-        ACCESS_TOKEN: ${{ secrets.BUILD_GH }}
-        BASE_BRANCH: master # The branch the action should deploy from.
-        BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: docs/.vuepress/dist # The folder the action should deploy.
-        BASE_URL: "data-science-quizzes/"
-        BUILD_SCRIPT: npm install && npm run build # The build script the action should run prior to deploying.
+        CI: true

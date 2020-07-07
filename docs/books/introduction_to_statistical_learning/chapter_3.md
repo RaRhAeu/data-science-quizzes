@@ -3,7 +3,7 @@
 
 ### 1. Select true statements based on information below
 
-$\hat{y}$ = $\hat{\beta_0}$ + $\hat{\beta_1}$*$x$ 
+$\hat{y}$ = $\hat{\beta_0}$ + $\hat{\beta_1}$*$x$
 
 <Answer>
 
@@ -41,12 +41,12 @@ Coefficients can be found only throught iterative optimization methods
 </Answer>
 <Answer correct=true>
 
-Standard error for $\hat{\beta_0}$ is dependent on n, therefore biased, but it is asymtotically unbiased 
+Standard error for $\hat{\beta_0}$ is dependent on n, therefore biased, but it is asymtotically unbiased
 
 </Answer>
 <Answer>
 
-Standard error for $\hat{\beta_1}$ is dependent on n, therefore biased, but it is asymtotically unbiased 
+Standard error for $\hat{\beta_1}$ is dependent on n, therefore biased, but it is asymtotically unbiased
 
 </Answer>
 <Answer>
@@ -55,7 +55,7 @@ Standard errors cannot be used to perform hypothesis test on coefficients
 
 </Answer>
 
-### 3. Look at formulas below and answer the questions: 
+### 3. Look at formulas below and answer the questions:
 
 $RSS = \sqrt{\frac{1}{n-2}*RSS}$   \
 $RSS = \sum{i=1}{n}(y_i - \hat{y_i})^2$   \
@@ -79,6 +79,3 @@ $R^2$ is always between 0 and 1
 $R^2$ measures the proportion of variability in Y that can be explained using X
 
 </Answer>
-
-
-

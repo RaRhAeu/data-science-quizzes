@@ -82,9 +82,3 @@ $R^2$ measures the proportion of variability in Y that can be explained using X
 
 
 
-
-
-</Answer>
-
-
-

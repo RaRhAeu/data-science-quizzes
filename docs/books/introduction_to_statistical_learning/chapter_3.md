@@ -80,15 +80,7 @@ $R^2$ measures the proportion of variability in Y that can be explained using X
 
 </Answer>
 
-# template : 
-### In code above when R is making copy of object `a`
 
-<Answer>
-
-while assigning it to b
-
-</Answer>
-<Answer correct=true>
 
 
 

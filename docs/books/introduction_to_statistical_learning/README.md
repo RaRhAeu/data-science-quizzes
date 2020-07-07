@@ -5,6 +5,4 @@
 ### [source](http://faculty.marshall.usc.edu/gareth-james/ISL/)
 
 ## Quizzes
-[chapter 3](https://github.com/RaRhAeu/data-science-quizzes/blob/master/docs/books/introduction_to_statistical_learning/chapter_3.md)
-
-## Code examples
+[chapter 3](/books/introduction_to_statistical_learning/chapter_3/)

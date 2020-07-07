@@ -5,6 +5,6 @@
 ### [source](https://adv-r.hadley.nz/)
 
 ## Quizzes
-### [chapter_2](/books/advanced_r/chapter_2/)
+### [chapter_2](https://rarhaeu.github.io/data-science-quizzes/books/advanced_r/chapter_2.html)
 
 ## Code examples

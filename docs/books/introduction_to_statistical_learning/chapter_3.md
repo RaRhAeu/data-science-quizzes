@@ -3,7 +3,7 @@
 
 ### 1. Select true statements based on information below
 
-$\hat{y}$ = $\hat{\beta_0}$ + $\hat{\beta_1}$*$x$
+$\hat{y} = \hat{\beta_0} + \hat{\beta_1}* x$
 
 <Answer>
 
@@ -57,10 +57,11 @@ Standard errors cannot be used to perform hypothesis test on coefficients
 
 ### 3. Look at formulas below and answer the questions:
 
-$RSS = \sqrt{\frac{1}{n-2}*RSS}$   \
-$RSS = \sum{i=1}{n}(y_i - \hat{y_i})^2$   \
-$R^2 = \frac{TSS - RSS}{TSS} = 1 - \frac{RSS}{TSS}$, \
-where $TSS = \sum{i=1}{n}(y_i - \overline{y_i})^2$
+$$RSS = \sqrt{\frac{1}{n-2}* RSS}   
+RSS = \sum{i=1}{n}(y_i - \hat{y_i})^2   
+R^2 = \frac{TSS - RSS}{TSS} = 1 - \frac{RSS}{TSS},$$
+where
+$TSS = \sum{i=1}{n}(y_i - \overline{y_i})^2$
 
 now please select true statements
 
